@@ -1,5 +1,4 @@
 import React from 'react';
-import { Text } from 'react-native';
 
 import { storiesOf } from '@storybook/react-native';
 import { action } from '@storybook/addon-actions';
@@ -17,21 +16,10 @@ storiesOf('Welcome', module).add('to Storybook', () => (
 
 storiesOf('Button', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
-  .add('with text', () => (
-    <Button onPress={action('clicked-text')}>
-      <Text>Hello Button</Text>
-    </Button>
-  ))
-  .add('with long text', () => (
-    <Button onPress={action('clicked-text')}>
-      <Text>Hello I am very long Button</Text>
-    </Button>
-  ))
-  .add('with some emoji', () => (
-    <Button onPress={action('clicked-emoji')}>
-      <Text>😀 😎 👍 💯</Text>
-    </Button>
-  ));
+  .add('primary', () => <Button text="Buttons" type="primary" />)
+  .add('secondary', () => <Button text="Buttons" type="secondary" />); //   </Button>
+// .add('with long text', () => <Button text="Buttons2" />)
+// .add('with some emoji', () => <Button text="😀 😎 👍 💯" loading />);
 storiesOf('TextInput', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
   .add('without text', () => <TextInput onChange={action('clicked-text')} />)

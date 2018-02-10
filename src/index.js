@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+import { Button } from '../storybook/elements';
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -17,6 +19,7 @@ export default class App extends React.Component {
         <Text>Open up App.js to start working on your app!</Text>
         <Text>Changes you make will automatically reload.</Text>
         <Text>Shake your phone to open the developer menu.</Text>
+        <Button text="I am a button" type="primary" />
       </View>
     );
   }
