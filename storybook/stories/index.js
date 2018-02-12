@@ -8,7 +8,9 @@ import CenterView from './CenterView';
 import Welcome from './Welcome';
 
 import Button from './Button'; // eslint-disable-line
-import TextInput from './TextInput'; // eslint-disable-line
+import Input from './Input'; // eslint-disable-line
+import List from './List'; // eslint-disable-line
+import Header from './Header'; // eslint-disable-line
 
 storiesOf('Welcome', module).add('to Storybook', () => (
   <Welcome showApp={linkTo('Button')} />
@@ -24,10 +26,8 @@ storiesOf('Button', module)
 // .add('with some emoji', () => <Button text="😀 😎 👍 💯" loading />);
 storiesOf('TextInput', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
-  .add('without text', () => <TextInput onChange={action('clicked-text')} />)
-  .add('with text', () => (
-    <TextInput
-      value="I am a text input box"
-      onChange={action('clicked-text')}
-    />
-  ));
+  .add('with text', () => <Input placeholder="boom" />);
+storiesOf('List', module) // .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
+  .add('list', () => <List />);
+storiesOf('Header', module) // .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
+  .add('Header', () => <Header />);
