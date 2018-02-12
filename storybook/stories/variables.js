@@ -1,7 +1,42 @@
-export const basic = {
-  primaryColor: '#3b5998',
+export const themeColorPalette = {
+  paleGrey: '#ececed',
+  paleGreyTwo: '#f5f5f6',
+  Steel: '#87888c',
+  mediumPink: '#f55a9e',
+  silver: '#c0c0c5',
 };
 
 export const button = {
-  radius: 4,
+  default: {
+    width: 325,
+    height: 50,
+    borderRadius: 7,
+    backgroundColor: '#3b5998',
+  },
+  primary: {
+    borderRadius: 7,
+    backgroundColor: '#3b5998',
+  },
+  secondary: {
+    borderRadius: 7,
+    backgroundColor: 'red',
+  },
+  rounded: {
+    width: 150,
+    height: 40,
+    borderRadius: 100,
+    color: '#ffff',
+    backgroundColor: 'red',
+    borderWidth: 1,
+    borderColor: '#ffff',
+  },
+  semiRounded: {
+    width: 150,
+    height: 40,
+    color: '#34495e',
+    borderRadius: 8,
+    backgroundColor: '#ffff',
+    borderWidth: 1,
+    borderColor: '#34495e',
+  },
 };

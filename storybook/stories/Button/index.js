@@ -2,32 +2,77 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Button as ButtonEl } from 'react-native-elements';
 
-import { basic, button } from '../variables';
+import { button } from '../variables';
 
 const Button = props => {
-  const { buttonStyle, type, ...remainingProps } = props;
-
+  const {
+ buttonStyle, textStyle, type, ...remainingProps 
+} = props;
+  // console.log('button', button);
   let myButtonStyle = {
     ...buttonStyle,
-    width: 325,
-    height: 50,
-    borderRadius: button.radius,
-    backgroundColor: 'black',
+    width: button.default.width,
+    height: button.default.height,
+    backgroundColor: button.default.backgroundColor,
+  };
+  let myTextStyle = {
+    ...textStyle,
   };
   if (type === 'primary') {
     myButtonStyle = {
       ...myButtonStyle,
-      backgroundColor: basic.primaryColor,
+      backgroundColor: button.primary.backgroundColor,
+      borderRadius: button.primary.borderRadius,
+    };
+    myTextStyle = {
+      ...myTextStyle,
     };
   } else if (type === 'secondary') {
     myButtonStyle = {
       ...myButtonStyle,
-      backgroundColor: 'red',
-      borderRadius: 7,
+      backgroundColor: button.secondary.backgroundColor,
+      borderRadius: button.secondary.borderRadius,
+    };
+    myTextStyle = {
+      ...myTextStyle,
+    };
+  } else if (type === 'rounded') {
+    myButtonStyle = {
+      ...myButtonStyle,
+      width: button.rounded.width,
+      height: button.rounded.height,
+      borderRadius: button.rounded.borderRadius,
+      backgroundColor: button.rounded.backgroundColor,
+      borderWidth: button.rounded.borderWidth,
+      borderColor: button.rounded.borderColor,
+    };
+    myTextStyle = {
+      ...myTextStyle,
+      color: button.rounded.borderColor,
+    };
+  } else if (type === 'semiRounded') {
+    myButtonStyle = {
+      ...myButtonStyle,
+      width: button.semiRounded.width,
+      height: button.semiRounded.height,
+      borderRadius: button.semiRounded.borderRadius,
+      backgroundColor: button.semiRounded.backgroundColor,
+      borderWidth: button.semiRounded.borderWidth,
+      borderColor: button.semiRounded.borderColor,
+    };
+    myTextStyle = {
+      ...myTextStyle,
+      color: button.semiRounded.color,
     };
   }
 
-  return <ButtonEl buttonStyle={myButtonStyle} {...remainingProps} />;
+  return (
+    <ButtonEl
+      buttonStyle={myButtonStyle}
+      textStyle={myTextStyle}
+      {...remainingProps}
+    />
+  );
 };
 
 Button.defaultProps = {
