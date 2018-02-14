@@ -5570,7 +5570,7 @@ lodash@^3.10.1, lodash@^3.5.0:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
-lodash@^4.0.0, lodash@^4.14.0, lodash@^4.14.1, lodash@^4.16.6, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0, lodash@^4.6.1:
+lodash@^4.0.0, lodash@^4.11.1, lodash@^4.14.0, lodash@^4.14.1, lodash@^4.16.6, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0, lodash@^4.6.1:
   version "4.17.5"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.5.tgz#99a92d65c0272debe8c96b6057bc8fbfa3bed511"
 
@@ -7202,6 +7202,12 @@ react-native-compat@^1.0.0:
   resolved "https://registry.yarnpkg.com/react-native-compat/-/react-native-compat-1.0.0.tgz#491dbd8a0105ac061b8d0d926463ce6a3dff33bc"
   dependencies:
     prop-types "^15.5.10"
+
+react-native-easy-grid@^0.1.17:
+  version "0.1.17"
+  resolved "https://registry.yarnpkg.com/react-native-easy-grid/-/react-native-easy-grid-0.1.17.tgz#fad8cb371d465828c1c71daa4d8b513d33253452"
+  dependencies:
+    lodash "^4.11.1"
 
 react-native-elements@^1.0.0-beta:
   version "1.0.0-beta2"
