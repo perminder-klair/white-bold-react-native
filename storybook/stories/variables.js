@@ -11,15 +11,19 @@ export const button = {
     width: 325,
     height: 50,
     borderRadius: 7,
-    backgroundColor: '#3b5998',
+    backgroundColor: '#ffff',
+    color: '#31363d',
+    fontWeight: 'bold',
   },
   primary: {
     borderRadius: 7,
     backgroundColor: '#3b5998',
+    color: '#ffff',
   },
   secondary: {
     borderRadius: 7,
     backgroundColor: 'red',
+    color: '#ffff',
   },
   rounded: {
     width: 150,
@@ -38,6 +42,10 @@ export const button = {
     backgroundColor: '#ffff',
     borderWidth: 1,
     borderColor: '#34495e',
+  },
+  transparent: {
+    color: '#ffff',
+    backgroundColor: 'transparent',
   },
 };
 

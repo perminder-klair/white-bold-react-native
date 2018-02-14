@@ -43,9 +43,7 @@ export default class App extends React.Component {
         <Row>
           <Grid>
             <Row size={1} style={styles.topContainer}>
-              <Text style={[styles.textStyle, { fontWeight: 'bold' }]}>
-                Login
-              </Text>
+              <Button text="Login" type="transparent" />
             </Row>
             <Row size={2} style={styles.container}>
               <Image source={require('./img/logo.png')} style={styles.logo} />
@@ -58,13 +56,13 @@ export default class App extends React.Component {
         <Row>
           <Grid>
             <Row size={1} style={styles.container}>
-              <Button text="facebook" />
+              <Button text="Facebook" type="primary" />
             </Row>
             <Row size={1} style={styles.container}>
-              <Button text="facebook" />
+              <Button text="Create Account" />
             </Row>
             <Row size={2} style={styles.justifyContent}>
-              <Text style={styles.textStyle}>More Option</Text>
+              <Button text="More Option" type="transparent" />
             </Row>
           </Grid>
         </Row>
