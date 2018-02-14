@@ -5,9 +5,7 @@ import { Button as ButtonEl } from 'react-native-elements';
 import { button } from '../variables';
 
 const Button = props => {
-  const {
- buttonStyle, textStyle, type, ...remainingProps 
-} = props;
+  const { buttonStyle, textStyle, type, ...remainingProps } = props;
   // console.log('button', button);
   let myButtonStyle = {
     ...buttonStyle,

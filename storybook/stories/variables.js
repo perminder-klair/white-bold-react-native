@@ -67,10 +67,10 @@ export const list = [
 ];
 
 export const header = {
-  myleftComponent: {
+  myLeftComponent: {
     icon: 'menu',
     color: '#ffff',
   },
-  mycenterComponent: { text: 'Home' },
-  myrightComponent: { icon: 'home', color: '#ffff' },
+  myCenterComponent: { text: 'Home' },
+  myRightComponent: { icon: 'home', color: '#ffff' },
 };

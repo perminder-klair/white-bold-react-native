@@ -3,6 +3,6 @@ import React from 'react';
 import { Card as CardEl } from 'react-native-elements';
 // import { header } from '../variables';
 
-const Card = props => <CardEl />;
+const Card = () => <CardEl />;
 
 export { Card as default };

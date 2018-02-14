@@ -19,9 +19,15 @@ storiesOf('Welcome', module).add('to Storybook', () => (
 
 storiesOf('Button', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
-  .add('primary', () => <Button text="primary" type="primary" />)
-  .add('secondary', () => <Button text="secondary" type="secondary" />)
-  .add('rounded', () => <Button text="rounded" type="rounded" />)
+  .add('primary', () => (
+    <Button text="primary" type="primary" onClick={action('clicked')} />
+  ))
+  .add('secondary', () => (
+    <Button text="secondary" type="secondary" onClick={action('clicked')} />
+  ))
+  .add('rounded', () => (
+    <Button text="rounded" type="rounded" onClick={action('clicked')} />
+  ))
   .add('semiRounded', () => <Button text="Semi Rounded" type="semiRounded" />); //   </Button>
 // .add('with long text', () => <Button text="Buttons2" />)
 // .add('with some emoji', () => <Button text="😀 😎 👍 💯" loading />);

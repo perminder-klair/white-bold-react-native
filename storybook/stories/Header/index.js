@@ -11,25 +11,25 @@ const Header = props => {
     ...remainingProps
   } = props;
 
-  const myleftComponent = {
+  const myLeftComponent = {
     ...leftComponent,
-    icon: header.myleftComponent.icon,
-    color: header.myleftComponent.color,
+    icon: header.myLeftComponent.icon,
+    color: header.myLeftComponent.color,
   };
-  const mycenterComponent = {
+  const myCenterComponent = {
     ...centerComponent,
-    text: header.mycenterComponent.text,
+    text: header.myCenterComponent.text,
   };
-  const myrightComponent = {
+  const myRightComponent = {
     ...rightComponent,
-    icon: header.myrightComponent.icon,
-    color: header.myrightComponent.color,
+    icon: header.myRightComponent.icon,
+    color: header.myRightComponent.color,
   };
   return (
     <HeaderEl
-      leftComponent={myleftComponent}
-      centerComponent={mycenterComponent}
-      rightComponent={myrightComponent}
+      leftComponent={myLeftComponent}
+      centerComponent={myCenterComponent}
+      rightComponent={myRightComponent}
       {...remainingProps}
     />
   );

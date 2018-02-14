@@ -38,7 +38,8 @@
     "react": "^16.0.0",
     "react-native": "^0.50.3",
     "react-native-easy-grid": "^0.1.17",
-    "react-native-elements": "^1.0.0-beta"
+    "react-native-elements": "^1.0.0-beta",
+    "react-navigation": "^1.0.3"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.3.9",
