@@ -36,6 +36,9 @@ const styles = StyleSheet.create({
 });
 
 export default class Home extends React.Component {
+  static navigationOptions = {
+    headerTitle: 'W&B',
+  };
   render() {
     return (
       <Grid>
