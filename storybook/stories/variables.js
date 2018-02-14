@@ -57,3 +57,12 @@ export const list = [
     subtitle: 'Vice Chairman',
   },
 ];
+
+export const header = {
+  myleftComponent: {
+    icon: 'menu',
+    color: '#ffff',
+  },
+  mycenterComponent: { text: 'Home' },
+  myrightComponent: { icon: 'home', color: '#ffff' },
+};

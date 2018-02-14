@@ -11,6 +11,7 @@ import Button from './Button'; // eslint-disable-line
 import Input from './Input'; // eslint-disable-line
 import List from './List'; // eslint-disable-line
 import Header from './Header'; // eslint-disable-line
+import Card from './Card'; // eslint-disable-line
 
 storiesOf('Welcome', module).add('to Storybook', () => (
   <Welcome showApp={linkTo('Button')} />
@@ -31,3 +32,5 @@ storiesOf('List', module) // .addDecorator(getStory => <CenterView>{getStory()}<
   .add('list', () => <List />);
 storiesOf('Header', module) // .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
   .add('Header', () => <Header />);
+storiesOf('Card', module) // .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
+  .add('Card', () => <Card />);
