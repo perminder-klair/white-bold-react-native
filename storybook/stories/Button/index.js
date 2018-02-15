@@ -9,38 +9,33 @@ const Button = props => {
   // console.log('button', button);
   let myButtonStyle = {
     ...buttonStyle,
-    width: button.default.width,
-    height: button.default.height,
-    backgroundColor: button.default.backgroundColor,
   };
   let myTextStyle = {
     ...textStyle,
-    color: button.default.color,
-    fontWeight: button.default.fontWeight,
   };
   if (type === 'primary') {
     myButtonStyle = {
-      ...myButtonStyle,
+      ...buttonStyle,
       backgroundColor: button.primary.backgroundColor,
       borderRadius: button.primary.borderRadius,
     };
     myTextStyle = {
-      ...myTextStyle,
+      ...textStyle,
       color: button.primary.color,
       fontWeight: button.default.fontWeight,
     };
   } else if (type === 'secondary') {
     myButtonStyle = {
-      ...myButtonStyle,
+      ...buttonStyle,
       backgroundColor: button.secondary.backgroundColor,
       borderRadius: button.secondary.borderRadius,
     };
     myTextStyle = {
-      ...myTextStyle,
+      ...textStyle,
     };
   } else if (type === 'rounded') {
     myButtonStyle = {
-      ...myButtonStyle,
+      ...buttonStyle,
       width: button.rounded.width,
       height: button.rounded.height,
       borderRadius: button.rounded.borderRadius,
@@ -49,12 +44,12 @@ const Button = props => {
       borderColor: button.rounded.borderColor,
     };
     myTextStyle = {
-      ...myTextStyle,
-      color: button.rounded.borderColor,
+      ...textStyle,
+      color: button.rounded.color,
     };
   } else if (type === 'semiRounded') {
     myButtonStyle = {
-      ...myButtonStyle,
+      ...buttonStyle,
       width: button.semiRounded.width,
       height: button.semiRounded.height,
       borderRadius: button.semiRounded.borderRadius,
@@ -63,17 +58,17 @@ const Button = props => {
       borderColor: button.semiRounded.borderColor,
     };
     myTextStyle = {
-      ...myTextStyle,
+      ...textStyle,
       color: button.semiRounded.color,
     };
   } else if (type === 'transparent') {
     myButtonStyle = {
-      ...myButtonStyle,
-
+      ...buttonStyle,
+      borderRadius: button.transparent.borderRadius,
       backgroundColor: button.transparent.backgroundColor,
     };
     myTextStyle = {
-      ...myTextStyle,
+      ...textStyle,
       color: button.transparent.color,
     };
   }

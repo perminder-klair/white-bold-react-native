@@ -7,14 +7,6 @@ export const themeColorPalette = {
 };
 
 export const button = {
-  default: {
-    width: 325,
-    height: 50,
-    borderRadius: 7,
-    backgroundColor: '#ffff',
-    color: '#31363d',
-    fontWeight: 'bold',
-  },
   primary: {
     borderRadius: 7,
     backgroundColor: '#3b5998',
@@ -29,8 +21,8 @@ export const button = {
     width: 150,
     height: 40,
     borderRadius: 100,
-    color: '#ffff',
-    backgroundColor: 'red',
+    color: '#31363d',
+    backgroundColor: '#ffff',
     borderWidth: 1,
     borderColor: '#ffff',
   },
@@ -46,6 +38,7 @@ export const button = {
   transparent: {
     color: '#ffff',
     backgroundColor: 'transparent',
+    borderRadius: 100,
   },
 };
 

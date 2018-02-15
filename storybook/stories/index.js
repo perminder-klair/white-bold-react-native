@@ -13,6 +13,9 @@ import List from './List'; // eslint-disable-line
 import Header from './Header'; // eslint-disable-line
 import Card from './Card'; // eslint-disable-line
 
+const clothImage = require('../../src/img/cloth.png');
+const wbImage = require('../../src/img/pexels.jpeg');
+
 storiesOf('Welcome', module).add('to Storybook', () => (
   <Welcome showApp={linkTo('Button')} />
 ));
@@ -39,4 +42,31 @@ storiesOf('List', module) // .addDecorator(getStory => <CenterView>{getStory()}<
 storiesOf('Header', module) // .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
   .add('Header', () => <Header />);
 storiesOf('Card', module) // .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
-  .add('Card', () => <Card />);
+  .add('Basic', () => (
+    <Card
+      type="basic"
+      featuredTitle="Collection"
+      featuredSubtitle="Discover our handpicked Stuff"
+      basicImage={wbImage}
+      children={
+        <Button
+          text="shop"
+          buttonStyle={{
+            width: 150,
+            height: 40,
+            borderWidth: 1,
+            borderColor: '#ffff',
+            borderRadius: 100,
+            backgroundColor: 'transparent',
+          }}
+        />
+      }
+    />
+  ))
+  .add('Primary', () => (
+    <Card
+      type="primary"
+      primaryImage={clothImage}
+      featuredTitle="hand-picked arrivals from Best Designer"
+    />
+  ));
