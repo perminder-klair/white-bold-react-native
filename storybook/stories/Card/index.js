@@ -1,12 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import {
+  Image,
+  StyleSheet,
+  Text,
+  View,
+  TouchableHighlight,
+} from 'react-native';
 
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import Button from '../Button';
 
 const clothImage = require('../../../src/img/cloth.png');
 const wbImage = require('../../../src/img/pexels.jpeg');
+const arrowImage = require('../../../src/img/arrow.png');
 
 const styles = StyleSheet.create({
   container: {
@@ -18,6 +25,10 @@ const styles = StyleSheet.create({
     width: 324,
     backgroundColor: '#f4f4f4',
   },
+  secondaryWrapper: {
+    height: 155,
+    width: 187,
+  },
   justifier: {
     justifyContent: 'center',
     alignItems: 'center',
@@ -26,9 +37,19 @@ const styles = StyleSheet.create({
     fontSize: 30,
     color: '#31363d',
   },
+  otherTitle: {
+    fontSize: 24,
+    color: '#ffffff',
+    marginTop: 28,
+  },
   featuredSubtitle: {
     fontSize: 16,
     color: '#31363d',
+  },
+  otherSubtitle: {
+    fontSize: 14,
+    color: '#ffffff',
+    margin: 15,
   },
   cardNumber: {
     fontWeight: '800',
@@ -39,6 +60,12 @@ const styles = StyleSheet.create({
     position: 'absolute',
     height: 175,
     width: 324,
+  },
+  secondaryBackgroundImage: {
+    position: 'absolute',
+    height: 155,
+    width: 187,
+    opacity: 0.77,
   },
   Image: {
     height: 175,
@@ -54,9 +81,12 @@ const Card = props => {
     type,
     featuredTitle,
     featuredSubtitle,
+    featuredSecondaryTitle,
+    featuredSecondarySubtitle,
     children,
     primaryImage,
     basicImage,
+    secondaryImage,
   } = props;
   return (
     <View style={[styles.justifier, styles.container]}>
@@ -101,6 +131,55 @@ const Card = props => {
           </Row>
           <Row size={1} style={{ marginBottom: 15 }}>
             {children}
+          </Row>
+        </Grid>
+      )}
+      {type === 'secondary' && (
+        <Grid style={[styles.justifier, styles.secondaryWrapper]}>
+          <Image
+            source={secondaryImage}
+            style={styles.secondaryBackgroundImage}
+          />
+          <Row size={1} style={[styles.justifier, { marginTop: 15 }]}>
+            <Text style={[styles.otherTitle, styles.textStyle]}>
+              {featuredSecondaryTitle}
+            </Text>
+          </Row>
+          <Row size={1}>
+            <Text style={[styles.otherSubtitle, styles.textStyle]}>
+              {featuredSecondarySubtitle}
+            </Text>
+          </Row>
+          <Row size={1} style={{ marginBottom: 15 }}>
+            <TouchableHighlight onPress={() => {}} underlayColor="transparent">
+              <Image
+                source={arrowImage}
+                style={{ height: 16, width: 16, marginBottom: 35 }}
+              />
+            </TouchableHighlight>
+          </Row>
+        </Grid>
+      )}
+      {type === 'blog-card' && (
+        <Grid style={[styles.justifier, styles.wrapper]}>
+          <Image source={basicImage} style={styles.backgroundImage} />
+          <Row size={1} style={[styles.justifier, { marginTop: 15 }]}>
+            <Text style={[styles.otherTitle, styles.textStyle]}>
+              {featuredTitle}
+            </Text>
+          </Row>
+          <Row size={1}>
+            <Text style={[styles.otherSubtitle, styles.textStyle]}>
+              {featuredSubtitle}
+            </Text>
+          </Row>
+          <Row size={1} style={{ marginBottom: 15 }}>
+            <TouchableHighlight onPress={() => {}} underlayColor="transparent">
+              <Image
+                source={arrowImage}
+                style={{ height: 16, width: 16, marginBottom: 35 }}
+              />
+            </TouchableHighlight>
           </Row>
         </Grid>
       )}

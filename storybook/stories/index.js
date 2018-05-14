@@ -15,6 +15,7 @@ import Card from './Card'; // eslint-disable-line
 
 const clothImage = require('../../src/img/cloth.png');
 const wbImage = require('../../src/img/pexels.jpeg');
+const blogImage = require('../../src/img/blog.png');
 
 storiesOf('Welcome', module).add('to Storybook', () => (
   <Welcome showApp={linkTo('Button')} />
@@ -68,5 +69,21 @@ storiesOf('Card', module) // .addDecorator(getStory => <CenterView>{getStory()}<
       type="primary"
       primaryImage={clothImage}
       featuredTitle="hand-picked arrivals from Best Designer"
+    />
+  ))
+  .add('Secondary', () => (
+    <Card
+      type="secondary"
+      secondaryImage={wbImage}
+      featuredSecondaryTitle="Dresses"
+      featuredSecondarySubtitle="136 items"
+    />
+  ))
+  .add('Blog-card', () => (
+    <Card
+      type="blog-card"
+      featuredTitle="Our Blog Articles"
+      featuredSubtitle="How To Shop The Sales Like A Fashion Editor"
+      basicImage={blogImage}
     />
   ));

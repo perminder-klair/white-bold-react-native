@@ -22,7 +22,7 @@ const Button = props => {
     myTextStyle = {
       ...textStyle,
       color: button.primary.color,
-      fontWeight: button.default.fontWeight,
+      // fontWeight: button.default.fontWeight,
     };
   } else if (type === 'secondary') {
     myButtonStyle = {
