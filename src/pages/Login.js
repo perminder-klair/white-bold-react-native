@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, Image } from 'react-native';
 import { Row, Grid } from 'react-native-easy-grid';
+import { Grid as AntGrid } from 'antd-mobile';
+
 import { Button } from '../../storybook/elements';
 
 const wbImage = require('../img/wb.png');
@@ -38,7 +40,7 @@ const styles = StyleSheet.create({
 export default class Login extends React.Component {
   render() {
     return (
-      <Grid>
+      <AntGrid>
         <Image source={wbImage} style={styles.backgroundImage} />
         <Row>
           <Grid>
@@ -53,7 +55,7 @@ export default class Login extends React.Component {
             </Row>
           </Grid>
         </Row>
-      </Grid>
+      </AntGrid>
     );
   }
 }
